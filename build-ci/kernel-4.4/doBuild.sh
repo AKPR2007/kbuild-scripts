@@ -9,7 +9,7 @@ KERNEL_DIR=$PWD
 BUILD_START=$(date +"%s")
 
 # Name and version of kernel
-KERNEL_NAME="Mystic-EAS"
+KERNEL_NAME="Deagle-RbEX"
 KERNEL_VERSION="beta"
 
 # Device name
@@ -46,11 +46,11 @@ fi
 # Setup environtment
 export ARCH=arm64
 export SUBARCH=arm64
-export KBUILD_BUILD_USER="okta_10"
+export KBUILD_BUILD_USER="Ahnaf"
 export KBUILD_BUILD_HOST="ArchLinux"
 AK3_DIR=$KERNEL_DIR/ak3-$DEVICE
 KERNEL_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz
-ZIP_DATE=$(TZ=Asia/Jakarta date +'%Y%m%d-%H%M')
+ZIP_DATE=$(TZ=Asia/Dhaka date +'%Y%m%d-%H%M')
 ZIP_NAME="$KERNEL_NAME"_"$DEVICE""$LOCALVERSION"_"$CONFIGVERSION"_"$ZIP_DATE".zip
 
 # Setup toolchain
@@ -90,7 +90,7 @@ push_document() {
 }
 
 # Export defconfig
-make O=out mystic-"$DEVICE"-"$CONFIGVERSION"_defconfig
+make O=out deagle_"$DEVICE"_"$CONFIGVERSION"_defconfig
 
 # Enable QTI haptics for all build
 scripts/config --file out/.config -e CONFIG_INPUT_QTI_HAPTICS
