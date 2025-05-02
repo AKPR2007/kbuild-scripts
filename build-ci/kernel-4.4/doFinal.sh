@@ -34,7 +34,7 @@ push_message() {
 # Push message to telegram
 push_message "
 <b>======================================</b>
-<b>Success Building :</b> <code>DeagleEx Kernel</code>
+<b>Success Building :</b> <code>Mystic Kernel KSUN</code>
 <b>Linux Version :</b> <code>$(make kernelversion | cut -d " " -f5 | tr -d '\n')</code>
 <b>Build Date :</b> <code>$(date +"%A, %d %b %Y, %H:%M:%S")</code>
 <b>Build Using :</b> <code>$CPU $CORES thread</code>
