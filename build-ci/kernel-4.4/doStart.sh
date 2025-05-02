@@ -4,7 +4,7 @@
 
 # Clone kernel source
 if [[ "$*" =~ "stable" ]]; then
-    git clone --depth=1 https://github.com/okta-10/mystic_kernel_sdm660-4.4.git -b mystic-caf kernel
+    git clone --depth=1 https://github.com/AKPR2007/kernel-sdm660.git -b deagle kernel
     cd kernel || exit
 elif [[ "$*" =~ "beta" ]]; then
     git clone --depth=1 https://"${GH_TOKEN}":x-oauth-basic@github.com/okta-10/mystic-beta.git -b mystic-caf kernel
@@ -38,7 +38,7 @@ push_message() {
 # Push message to telegram
 push_message "
 <b>======================================</b>
-<b>Start Building :</b> <code>Mystic Kernel</code>
+<b>Start Building :</b> <code>DeagleEx Kernel</code>
 <b>Linux Version :</b> <code>$(make kernelversion | cut -d " " -f5 | tr -d '\n')</code>
 <b>Source Branch :</b> <code>$(git rev-parse --abbrev-ref HEAD)</code>
 <b>======================================</b> "
