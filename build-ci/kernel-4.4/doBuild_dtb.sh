@@ -22,7 +22,7 @@ export SUBARCH=arm64
 AK3_DIR=$KERNEL_DIR/ak3-$DEVICE
 
 # Export defconfig
-make O=out deagle_"$DEVICE"_oldcam_defconfig
+make O=out mystic-"$DEVICE"-oldcam_defconfig
 
 # Start compile
 if [[ "$*" =~ "clang" ]]; then
