@@ -9,7 +9,7 @@ KERNEL_DIR=$PWD
 BUILD_START=$(date +"%s")
 
 # Name and version of kernel
-KERNEL_NAME="Deagle-RbEX"
+KERNEL_NAME="Mystic-Kernel"
 KERNEL_VERSION="beta"
 
 # Device name
@@ -90,7 +90,7 @@ push_document() {
 }
 
 # Export defconfig
-make O=out deagle_"$DEVICE"_"$CONFIGVERSION"_defconfig
+make O=out mystic-"$DEVICE"-"$CONFIGVERSION"_defconfig
 
 # Enable QTI haptics for all build
 scripts/config --file out/.config -e CONFIG_INPUT_QTI_HAPTICS
