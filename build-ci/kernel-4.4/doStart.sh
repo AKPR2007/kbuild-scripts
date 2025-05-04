@@ -4,7 +4,7 @@
 
 # Clone kernel source
 if [[ "$*" =~ "stable" ]]; then
-    git clone --depth=1 https://github.com/okta-10/mystic_kernel_sdm660-4.4.git -b mystic-caf kernel
+    git clone --depth=1 https://github.com/AKPR2007/mystic_kernel_sdm660-4.4.git -b mystic-caf kernel
     cd kernel || exit
 elif [[ "$*" =~ "beta" ]]; then
     git clone --depth=1 https://"${GH_TOKEN}":x-oauth-basic@github.com/okta-10/mystic-beta.git -b mystic-caf kernel
